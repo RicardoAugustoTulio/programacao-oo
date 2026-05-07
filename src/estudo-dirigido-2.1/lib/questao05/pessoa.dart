@@ -1,4 +1,4 @@
-class Pessoa {
+abstract class Pessoa {
   late String _nome;
   late int _idade;
 
@@ -10,8 +10,5 @@ class Pessoa {
   String getNome() => _nome;
   int getIdade() => _idade;
 
-  void exibirDados() {
-    print('Nome: $_nome');
-    print('Idade: $_idade');
-  }
+  void exibirDados();
 }

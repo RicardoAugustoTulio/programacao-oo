@@ -12,8 +12,11 @@ class Aluno extends Pessoa {
 
   @override
   void exibirDados() {
-    super.exibirDados();
+    print('Aluno');
+    print('Nome: ${getNome()}');
+    print('Idade: ${getIdade()}');
     print('Matrícula: $_matricula');
     print('Curso: $_curso');
+    print('');
   }
 }

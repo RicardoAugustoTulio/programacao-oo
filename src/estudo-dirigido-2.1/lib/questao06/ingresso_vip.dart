@@ -1,6 +1,7 @@
 import 'ingresso.dart';
+import 'calculavel.dart';
 
-class IngressoVip extends Ingresso {
+class IngressoVip extends Ingresso implements Calculavel {
   late double _valorAdicional;
 
   IngressoVip(String evento, double valor, double valorAdicional)
@@ -8,12 +9,15 @@ class IngressoVip extends Ingresso {
     _valorAdicional = valorAdicional;
   }
 
+  @override
   double valorFinal() => getValor() + _valorAdicional;
 
-  @override
   void exibirResumo() {
-    super.exibirResumo();
+    print('Ingresso VIP');
+    print('Evento: ${getEvento()}');
+    print('Valor base: R\$ ${getValor()}');
     print('Adicional VIP: R\$ $_valorAdicional');
-    print('Total: R\$ ${valorFinal()}');
+    print('Valor final: R\$ ${valorFinal()}');
+    print('');
   }
 }

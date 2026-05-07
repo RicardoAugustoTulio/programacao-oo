@@ -9,9 +9,4 @@ class Ingresso {
 
   String getEvento() => _evento;
   double getValor() => _valor;
-
-  void exibirResumo() {
-    print('Evento: $_evento');
-    print('Valor: R\$ $_valor');
-  }
 }
