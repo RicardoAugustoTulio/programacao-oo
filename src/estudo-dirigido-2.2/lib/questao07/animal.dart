@@ -1,9 +1,7 @@
 abstract class Animal {
   String nome;
 
-  Animal(String nome){
-    _nome = nome;
-  }
+  Animal(this.nome);
 
   void emitirSom();
 }
